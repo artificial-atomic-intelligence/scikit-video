@@ -48,8 +48,8 @@ def psnr(referenceVideoData, distortedVideoData, bitdepth=8):
 
     scores = np.zeros(T, dtype=np.float)
     for t in range(T):
-        referenceFrame = referenceVideoData[t].astype(np.float)
-        distortedFrame = distortedVideoData[t].astype(np.float)
+        referenceFrame = referenceVideoData[t].astype(float)
+        distortedFrame = distortedVideoData[t].astype(float)
 
         mse = np.mean((referenceFrame - distortedFrame)**2)
         psnr = 10 * np.log10(maxsq / mse)

@@ -38,7 +38,7 @@ def canny(frame):
 
     avg_window = gauss_window(4, 1.2) 
 
-    frame = frame.astype(np.float)
+    frame = frame.astype(float)
 
     # do a better threshood job lol
     mu = np.zeros((M, N), dtype=np.float)
